@@ -6,12 +6,8 @@ A deep learning-based chess engine trained on elite-level Lichess games. Play ag
 
 ### Play Against the AI (Try it out!)
 
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
-
-Open your browser at `http://localhost:8501` and start playing!
+Try it out [here](https://zac-chess-ai.streamlit.app/)!
+`https://zac-chess-ai.streamlit.app/`
 
 ## Project Overview
 
