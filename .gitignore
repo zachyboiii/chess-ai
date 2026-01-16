@@ -1,0 +1,7 @@
+.venv
+data/pgn
+__pycache__/
+.vscode/
+stockfish/scripts
+stockfish/src
+stockfish/stockfish-windows-x86-64-avx2.exe
