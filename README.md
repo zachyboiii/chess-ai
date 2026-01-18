@@ -6,12 +6,10 @@ A deep learning-based chess engine trained on elite-level Lichess games. Play ag
 
 ### Play Against the AI (Try it out!)
 
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
+Try it out [here](https://zac-chess-ai.streamlit.app/)!
+`https://zac-chess-ai.streamlit.app/`
 
-Open your browser at `http://localhost:8501` and start playing!
+---
 
 ## Project Overview
 
@@ -20,6 +18,8 @@ This project demonstrates a neural network approach to learning chess move predi
 1. **Training Approach**: Train a CNN on historical chess games to predict strong moves
 2. **Evaluation**: Use `predict.ipynb` to test the model against Stockfish engine
 3. **Interactive Demo**: Play against the trained model in a Streamlit web app
+
+---
 
 ## Training Approach
 
@@ -49,6 +49,8 @@ The model is trained using **supervised learning** on elite-level chess games:
 - **Pre-trained Model**: `10Epoch_chessModel.pth` (10 epochs on Lichess data)
 - **Device**: GPU-accelerated (CUDA) if available, CPU fallback
 
+---
+
 ## Evaluation Against Stockfish
 
 Use `predict.ipynb` to:
@@ -60,39 +62,7 @@ Use `predict.ipynb` to:
 
 Run the notebook to see how the trained model performs against one of the strongest chess engines.
 
-## Interactive App
-
-The Streamlit app (`app.py`) provides a user-friendly interface to:
-
-- **Play against the AI**: Make moves and let the model respond
-- **Real-time board visualization**: See the current position and move history
-- **Move tracking**: View all moves in the current game
-- **GPU acceleration**: Automatic CUDA support for fast inference
-
-Simply run:
-
-```bash
-streamlit run app.py
-```
-
-## Installation
-
-### Prerequisites
-
-- Python 3.7+
-- pip
-
-### Setup
-
-```bash
-# Create virtual environment
-python -m venv venv
-venv\Scripts\Activate.ps1  # Windows
-source venv/bin/activate   # Linux/Mac
-
-# Install dependencies
-pip install -r requirements.txt
-```
+---
 
 ## Project Structure
 
@@ -111,28 +81,9 @@ chess_ai/
 │   └── pgn/                 # Lichess elite games
 └── stockfish/               # Stockfish chess engine
 ```
-
-## Dependencies
-
-- `chess`: Chess board and move validation
-- `numpy`: Numerical computing
-- `torch`: Deep learning framework
-- `streamlit`: Web interface
-- `tqdm`: Progress bars
-
-See [requirements.txt](requirements.txt) for exact versions.
-
-## Next Steps
-
-- **Deploy**: The app is ready for deployment!
-- **Improve**: Train for more epochs or with additional data
-- **Optimize**: Experiment with different architectures
-- **Benchmark**: Compare against other engines with `predict.ipynb`
+---
 
 ## License
 
 Please respect Lichess.org's data usage policies when using the training data.
 
----
-
-**Ready to play?** Run `streamlit run app.py` and challenge the AI!
