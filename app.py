@@ -25,14 +25,14 @@ if 'board' not in st.session_state:
 def load_model_and_moves():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
-    with open('./models/move_to_int.pkl', 'rb') as f:
+    with open('./models/move_to_int2.pkl', 'rb') as f:
         move_to_int = pickle.load(f)
     
     int_to_move = {v: k for k, v in move_to_int.items()}
     num_classes = len(move_to_int)
     
     model = ChessModel(num_classes).to(device)
-    model.load_state_dict(torch.load('./models/10Epoch_chessModel.pth', map_location=device))
+    model.load_state_dict(torch.load('./models/50Epoch_chessModel.pth', map_location=device))
     model.eval()
     
     return model, move_to_int, int_to_move, device
